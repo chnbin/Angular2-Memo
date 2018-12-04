@@ -1,0 +1,33 @@
+<table>
+  <thead>
+    <tr>
+      <td>Column 1</td>
+      <td>Colume 2</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let field of fieldArray; let i = index">
+      <td>
+        <input [(ngModel)] ="field.code" type="text" name="{{field.code}}">
+      </td>
+      <td>
+        <input [(ngModel)] ="field.name" type="text" name="{{field.name}}">
+      </td>
+      <td>
+        <button type="button" (click) = "deleteFieldValue(i)">Delete</button>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="text" id="newAttrCode" name="newAttrCode" [(ngModel)]= "newAttr.code">
+      </td>
+      <td>
+        <input type="text" id="newAttrName" name="newAttrName" [(ngModel)]= "newAttr.name">
+      </td>
+      <td>
+        <button type="button" (click) = "addFieldValue()">Add</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<button type="button" (click)=onSubmit()>Submit</button>

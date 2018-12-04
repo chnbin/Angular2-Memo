@@ -1,0 +1,25 @@
+.ng2Table {
+  border: 1px solid black;
+  height: 40vh;
+  overflow-x: scroll;
+
+}
+:host /deep/ th {
+  background: #e9e9e9;
+}
+
+:host /deep/ ng2-smart-table table > tbody > tr > td {
+  border: 1px solid #e9e9e9;
+  padding: 0.1em 0.3em;
+  white-space: nowrap; /* Expand column width to text */
+}
+
+:host /deep/  ng2-smart-table table > thead > tr:first-child th{
+  position: sticky;
+  top: 0;
+}
+
+:host /deep/  ng2-smart-table table > tbody > tr:nth-child(even) {
+  background: #e9e9e9;
+}
+
